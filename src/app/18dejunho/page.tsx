@@ -30,10 +30,6 @@ export default function Info() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col items-center justify-center p-4 font-inter">
       <div className="max-w-4xl mx-auto text-center space-y-8">
-        {/* Texto em cima */}
-        <h1 className="text-2xl lg:text-3xl font-medium leading-tight tracking-wide bg-gradient-to-r from-gray-200 via-gray-100 to-gray-300 bg-clip-text text-transparent">
-          MAIS INFORMAÇÕES SOBRE OS 30 SELECIONADOS PARA O COPY TRADE
-        </h1>
 
         {/* Vídeo */}
         <div className="w-full max-w-3xl mx-auto">
