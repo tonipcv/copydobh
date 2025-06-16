@@ -120,7 +120,7 @@ export default function Quiz() {
                   </div>
                 </Link>
                 <Link 
-                  href="https://pay.hotmart.com/U100310460L?off=q0zx9oh5&checkoutMode=6"
+                  href="https://pay.hotmart.com/U100310460L?off=cnt3ylp9"
                   className="block p-8 border-2 border-gray-200 rounded-xl hover:border-black transition-all duration-300 hover:shadow-lg bg-white"
                 >
                   <div className="flex justify-between items-start">
@@ -143,7 +143,7 @@ export default function Quiz() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-black">R$ 247</div>
+                      <div className="text-3xl font-bold text-black">R$ 248</div>
                       <div className="text-gray-600">/mês</div>
                     </div>
                   </div>
