@@ -4,12 +4,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Premium() {
-  const [countdown, setCountdown] = useState(4);
+  const [countdown, setCountdown] = useState(3);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.location.href = "https://chat.whatsapp.com/LtEZbgu6ru4CzwbUZ8ba0t";
-    }, 4000); // 4 segundos
+      // Format phone number for WhatsApp API
+      const phoneNumber = "5511976650763"; // Removed special characters
+      window.location.href = `https://wa.me/${phoneNumber}`;
+    }, 3000); // 3 segundos
 
     // Countdown timer
     const countdownInterval = setInterval(() => {
@@ -63,7 +65,7 @@ export default function Premium() {
           <div className="w-64 bg-gray-800 rounded-full h-2 mx-auto">
             <div 
               className="bg-white h-2 rounded-full transition-all duration-1000 ease-linear"
-              style={{ width: `${((4 - countdown) / 4) * 100}%` }}
+              style={{ width: `${((3 - countdown) / 3) * 100}%` }}
             ></div>
           </div>
         </div>
