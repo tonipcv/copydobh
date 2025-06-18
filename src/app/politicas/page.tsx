@@ -34,9 +34,9 @@ export default function Policies() {
             <h2 className="text-xl font-bold mb-4">1. PARTES</h2>
             <p className="leading-relaxed">
               LYS METAVERSE LTDA., pessoa jurídica de direito privado, inscrita no CNPJ sob o nº 32.563.274/0001-85, 
-              com sede na cidade de São Paulo/SP, doravante denominada "PRODUTORA", em parceria com Gustavo Lima Diniz, 
-              doravante denominado "PARCEIRO", e o usuário final do serviço, identificado conforme os dados fornecidos 
-              na plataforma de conexão com a corretora BYBIT, doravante denominado "USUÁRIO".
+              com sede na cidade de São Paulo/SP, doravante denominada &ldquo;PRODUTORA&rdquo;, em parceria com Gustavo Lima Diniz, 
+              doravante denominado &ldquo;PARCEIRO&rdquo;, e o usuário final do serviço, identificado conforme os dados fornecidos 
+              na plataforma de conexão com a corretora BYBIT, doravante denominado &ldquo;USUÁRIO&rdquo;.
             </p>
           </section>
 
