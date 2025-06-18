@@ -2,11 +2,8 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function Info() {
-  const router = useRouter();
-
   useEffect(() => {
     // Script para o vídeo
     const script = document.createElement("script");
@@ -20,25 +17,6 @@ export default function Info() {
     }
     
     document.head.appendChild(script);
-
-    // Função para verificar o horário
-    const checkTime = () => {
-      const now = new Date();
-      // Converter para horário de Brasília (UTC-3)
-      const brasiliaTime = new Date(now.getTime() - (3 * 60 * 60 * 1000));
-      
-      // Data limite: 23:59 de 20 de março de 2024 (ajuste esta data conforme necessário)
-      const deadline = new Date('2024-03-20T23:59:00-03:00');
-      
-      // Redirecionar se já passou da data/hora limite
-      if (brasiliaTime >= deadline) {
-        router.push("/selecao");
-      }
-    };
-
-    // Verificar imediatamente e depois a cada minuto
-    checkTime();
-    const timeInterval = setInterval(checkTime, 60000);
     
     // Cleanup
     return () => {
@@ -46,9 +24,8 @@ export default function Info() {
       if (scriptToRemove) {
         scriptToRemove.remove();
       }
-      clearInterval(timeInterval);
     };
-  }, [router]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col">
