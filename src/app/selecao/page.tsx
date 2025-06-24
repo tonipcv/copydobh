@@ -19,7 +19,7 @@ export default function Premium() {
         <h1 className="text-white text-2xl lg:text-3xl font-bold mb-4">
           Vagas lotadas para o Copy Trade
         </h1>
-        
+
         <p className="text-white text-xl lg:text-2xl">
           Caso tenha vagas iremos avisar no grupo!
         </p>
