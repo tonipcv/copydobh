@@ -1,19 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import React from "react";
 import Script from "next/script";
 
 export default function VideoPage() {
-  useEffect(() => {
-    // Redirect after video ends
-    const timer = setTimeout(() => {
-      window.location.href = "/selecao";
-    }, 60000); // 60 seconds as a fallback
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center justify-center p-4">
