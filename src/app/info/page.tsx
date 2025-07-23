@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function Info() {
   useEffect(() => {
@@ -45,20 +46,20 @@ export default function Info() {
               padding: "56.25% 0 0"
             }}
           > 
-            <img 
+            <Image 
               id="thumb_6845f77e0cb5938a2b622735" 
               src="https://images.converteai.net/32ff2495-c71e-49ba-811b-00b5b49c517f/players/6845f77e0cb5938a2b622735/thumbnail.jpg" 
+              alt="Video thumbnail"
+              fill
               style={{
                 position: "absolute", 
                 top: 0, 
                 left: 0, 
                 width: "100%", 
                 height: "100%", 
-                objectFit: "cover", 
-                display: "block"
-              }} 
-              alt="thumbnail"
-            /> 
+                objectFit: "cover"
+              }}
+            />
             <div 
               id="backdrop_6845f77e0cb5938a2b622735" 
               style={{
