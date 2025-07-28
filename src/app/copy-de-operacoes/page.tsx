@@ -7,8 +7,8 @@ export default function NovoEvento() {
         
         {/* Heading */}
         <div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 dark:text-white tracking-tight leading-tight">
-            Conecte-se com mais de <span className="font-medium">30 pessoas</span> no dia 5 de Junho
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-light text-gray-900 dark:text-white tracking-tight leading-tight">
+            Copie automaticamente todas minhas operações <span className="font-medium">dia 06 de agosto vou selecionar 30 pessoas</span>
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-gray-500 dark:text-gray-400 font-light">
             Assista o vídeo e entre no grupo.
