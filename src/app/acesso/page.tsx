@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function Acesso() {
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
   useEffect(() => {
     // This ensures the player container is ready before the script loads
@@ -21,33 +22,29 @@ export default function Acesso() {
   }, [isScriptLoaded]);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
       <div className="w-full max-w-3xl px-4">
         <div className="text-white text-center mb-6">
           <h2 className="text-xl font-bold mb-2">Assista o vídeo e aprenda como conectar sua conta</h2>
           <p className="text-sm">São somente 30 acessos, batendo o limite não conectamos mais.</p>
         </div>
-        <div id="vid_684c333dae3ffc76ce6b719e" style={{ position: "relative", width: "100%", padding: "56.25% 0 0" }}>
-          <img 
-            id="thumb_684c333dae3ffc76ce6b719e" 
-            src="https://images.converteai.net/32ff2495-c71e-49ba-811b-00b5b49c517f/players/684c333dae3ffc76ce6b719e/thumbnail.jpg" 
-            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} 
-            alt="thumbnail" 
-          />
-          <div 
-            id="backdrop_684c333dae3ffc76ce6b719e" 
-            style={{ WebkitBackdropFilter: "blur(5px)", backdropFilter: "blur(5px)", position: "absolute", top: 0, height: "100%", width: "100%" }}
-          ></div>
-        </div>
-        
-        {/* Use Next.js Script component for better mobile compatibility */}
-        <Script
-          id="scr_684c333dae3ffc76ce6b719e"
-          src="https://scripts.converteai.net/32ff2495-c71e-49ba-811b-00b5b49c517f/players/684c333dae3ffc76ce6b719e/player.js"
-          strategy="afterInteractive"
-          onLoad={() => setIsScriptLoaded(true)}
-        />
-      </div>
+
+      {/* Blocking Modal - This overlay covers the entire screen but is transparent */}
+      {showModal && (
+        <>
+          {/* Invisible overlay that blocks all interactions */}
+          <div className="fixed inset-0 z-50" style={{ pointerEvents: 'all' }}></div>
+          
+          {/* Modal content */}
+          <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+            <div className="bg-white p-8 rounded-lg max-w-md w-full text-center shadow-xl border-2 border-red-500 pointer-events-auto">
+              <h2 className="text-xl font-bold mb-4 text-red-600">Aviso Importante</h2>
+              <p className="text-gray-800 text-lg mb-4">
+                Por conta de limite das vagas de conexão do Copy Trade as vagas estão lotadas!
+              </p>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
